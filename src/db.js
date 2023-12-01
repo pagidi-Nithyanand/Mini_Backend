@@ -5,7 +5,7 @@ const dbon = async () => {
   if (process.env.NODE_ENV !== 'test') {
     try {
       await mongoose.connect(
-        'mongodb+srv://Gopi:Gopino.1@cluster0.luogiyd.mongodb.net/'
+        MONGO_URL
       )
       console.log('Connected to MongoDB')
     } catch (error) {
